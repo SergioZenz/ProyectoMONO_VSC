@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <link rel="stylesheet" href="../css/index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>La Isla de los Monos - Contacto</title>
+</head>
+<body>
+    <header class="encabezado">
+    <h1 class="encabezado" id="Inicio"><img class="encabezado" src="../imagenes/Thesecretofmonkeyisland-logo.png" alt="Logo" width="25%" height="auto" ><strong class="encabezado">The Secret Of Monkey Island - Fan Page</strong></h1>
+    </header>
+    <nav class="nav1">
+        <ul class="ul1">
+            <li><a href="#Form_ingreso" class="a1"><Strong>Registracion</Strong></a></li>
+            <li><a href="#Registrados" class="a1"><strong>Lista de aportantes principales</strong></a></li>
+            <li><a href="../index.html" class="a1"><strong>Volver</strong></a></li>
+        </ul>
+    </nav>
+    <section>
+        <h2><strong>Datos de Contacto</strong></h2>
+        <h5>Por favor, ingrese sus datos para que podamos contactarlo... muchas gracias! <img src="../imagenes/3headmonkey-somi.webp" alt="Logo capibara" width="3%" height="auto"></h5>
+        <h2 id="#Form_ingreso">Formulario de ingreso de datos</h2>
+        <form action="https://formspree.io/f/mpwyaopd" method="POST">
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" required placeholder="Pepe"><br>
+            <label for="apellido">Apellido:</label>
+            <input type="text" id="apellido" name="apellido" placeholder="Sanchez"><br>
+            <label for="e-mail":>E-mail:</label>
+            <input type="email" name="email" id="e-mail" required placeholder="abcd@abcd.com.ar"> <br>
+            <label for="telefono":>Teléfono:</label>
+            <input type="number" name="telefono" id="telefono" required placeholder="01112345678"> <br>
+            <label> Mensaje: <textarea name="message"></textarea> </label> <br>
+            <label for="juegofav">Para ajustar tus intereses, ¿nos dirías cuál es tu juego favorito?:</label>
+            <select name="juegos" id="juegofav">
+            <optgroup label="De aventura retro">
+                <option value="1a">The Secret of Monkey Island</option>
+                <option value="2a">Indiana Jones and The Last Cruzade</option>
+                <option value="3a">The Dig</option>
+                <option value="4a">Maniac Mansion</option>
+                <option value="5a">Cualquiera hecho por "LucasArts"</option>
+            </optgroup>
+                <optgroup label="De aventura actual">
+                <option value="1b">La fuga de Deponia</option>
+                <option value="2b">Sam & Max</option>
+                <option value="3b">Machinarium</option>
+                <option value="4b">Cualquiera hecho por "Tell Tale Games"</option>
+            </optgroup>
+            </select>
+
+    <section class="contacto" id="contacto">
+      <h2 class="tit-contacto" id="contacto">Contactenos</h2>
+      <p class="subtit-contacto">Estimado cliente, nos interesa su opinión, deje su mensaje y correo de 
+        contacto para una pronta respuesta.
+      </h5>
+      <div class="form-container">
+        <form class="formulario">
+          <input type="text" name="nombre" id="nombre" placeholder="Ingrese su nombre"> <br>
+          <input type="email" name="mail" id="mail" placeholder="Ingrese su email"> <br>
+          <textarea class="mensaje" name="mensaje" id="mensaje" placeholder="Mensaje..." rows="4"></textarea> <br>
+          <button class="btn-enviar">Enviar</button>
+        </form>
+      </div>
+    </section>
+
+
+            <p>¿Desea recibir notificaciones de ofertas y/o anuncios?</p>
+            <input type="radio" id="opS" name="mail-list" value="Si" required>
+            <label for="opS">Si</label>
+            <input type="radio" id="opN" name="mail-list" value="No" required>
+            <label for="opN">No</label><br>
+        <button type="reset">Borrar</button>
+        <button type="submit">Enviar</button>
+        </form>
+    </section>
+    <section>
+        <h2 id="Registrados">Personas ya registradas en el sitio</h2>
+        <table border="2">
+            <caption>Datos de los usuarios</caption>
+            <thead>
+            <tr>
+                <th scope="col" rowspan="2">Apellido</th>
+                <th scope="col" rowspan="2">Nombre</th>
+                <th colspan="2">Contacto</th>
+            </tr>
+            <tr>
+                <th scope="col">E-mail</th>
+                <th scope="col">Ciudad</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>Threepwood </td>
+                <td>Guybrush</td>
+                <td>gtrheepwood@threeheadmonkey.com</td>
+                <td>Monkey Island</td>
+            </tr>
+            <tr>
+                <td>Marley</td>
+                <td>Elaine</td>
+                <td>Gobernadora@threeheadmonkey.com</td>
+                <td>isla Mêlée</td>
+            </tr>
+            <tr>
+                <td>McKracken</td>
+                <td>Zak</td>
+                <td>ZMcK@threeheadmonkey.com</td>
+                <td>Marte</td>
+            </tr>
+            <tr>
+                <td>Jones</td>
+                <td>Indiana</td>
+                <td>IJones@threeheadmonkey.com</td>
+                <td>Chicago</td>
+            </tr>
+            <tr>
+                <td colspan="2">Cantidad de usuarios registrados</td>
+                <td colspan="2" style="text-align: center;">4</td>
+            </tr>
+            </tbody>
+        </table>
+    </section>
+    <footer>
+        <p> Todos los derechos fueron reservados por <em><strong>Sergio Zen</strong></em>.</p>
+        <i class="fa-solid fa-square-envelope"></i>
+        <a href="mailto:sergioeezzz@gmail.com.ar">Enviar correo</a> <br><br>
+        <i class="fa-brands fa-discord"></i>
+        <i class="fa-brands fa-whatsapp"></i>
+        <i class="fa-brands fa-instagram"></i>
+        <br><br>
+    </footer>
+</body>
+</html>

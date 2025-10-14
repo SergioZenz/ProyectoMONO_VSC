@@ -32,6 +32,37 @@
     }
 
 
+.encabezado {
+    background-color:rgba(127, 255, 212, 0.883);
+    font-size: clamp(16px, 3vw, 55px);
+    font-style: italic;
+    font-family: "titulosMonkey";
+    color: brown;
+    display: flex;
+    align-items: center;
+    padding-bottom: 0px;
+    padding-top: 0px;
+    margin-left: 1px; 
+}
+
+
+/* Formateo del Nav y las lista de links */
+
+.nav1 {
+    border: 1px solid  lightgreen;
+    background-color: rgb(103, 206, 234);
+    font-family: "NavMonkey";
+    color: rgb(235, 235, 235);
+    justify-content: space-evenly;
+    align-content: center;
+    display: flex;
+    flex-direction: row;
+    font-style: italic;
+    font-size: clamp(10px, 1.1vw, 50px);
+    padding: 0.5vw;
+}
+
+
 .a1 {
     text-decoration: none;
     color: rgb(0, 136, 255);
@@ -47,19 +78,6 @@
     text-decoration: underline;
 }
 
-.nav1 {
-    border: 1px solid  lightgreen;
-    background-color: rgb(103, 206, 234);
-    font-family: "NavMonkey";
-    color: rgb(235, 235, 235);
-    justify-content: space-evenly;
-    align-content: center;
-    display: flex;
-    flex-direction: row;
-    font-style: italic;
-    font-size: clamp(8px, 1.1vw, 55px);
-    padding: 0.5vw;
-}
 
 .ul1 {
     list-style: none;
@@ -76,18 +94,6 @@
     align-items: center;
 }
 
-.encabezado {
-    background-color:rgba(127, 255, 212, 0.883);
-    font-size: 3vw;
-    font-style: italic;
-    font-family: "titulosMonkey";
-    color: brown;
-    display: flex;
-    align-items: center;
-    padding-bottom: 0px;
-    padding-top: 0px;
-    margin-left: 1px; 
-}
 
 
 .bienvenida {
@@ -139,8 +145,9 @@
   border: 2px solid rgb(170, 155, 196);
   border-radius: 8px;
   width: auto;
-  min-width: 300px;
+  min-width: 330px;
   margin: auto;
+  padding-top: 1vh;
 }
 
 .mensaje {
@@ -179,10 +186,11 @@ input[type=email] {
 
 select {
   font-size: clamp(4px, 4vw, 30px);
+  max-width: 300px;
 }
 
-/* Tabla de registrados */
 
+/* Tabla de registrados */
 
 .registrados {
   display: flex;
@@ -205,8 +213,9 @@ select {
 }
 
 .tabla {
-    width: 50vw; /* O un ancho específico */
+    width: 90vw; /* O un ancho específico */
     margin: 0 auto; /* Centra la tabla horizontalmente */
+    max-width: 1000px;
     border: 2px solid rgb(0, 1, 79); 
     border-collapse: collapse
 }
@@ -231,7 +240,7 @@ td {
   padding-left: 5vw;
   padding-right: 5vw;
   padding-bottom: 2vw;
-  font-size: 1.5vw;
+  font-size: clamp(12px, 1.5vw, 30px);
 }
 
 .resum-container {
@@ -248,7 +257,7 @@ td {
 }
 
 .tituloR {
-    font-size: clamp(2px, 3vw, 36px); /* antes 3vw font-size: clamp(minimum, preferred, maximum) */
+    font-size: clamp(10px, 3vw, 36px); /* antes 3vw font-size: clamp(minimum, preferred, maximum) */
     text-decoration: underline;
     text-align: center;
     margin: 10px;
@@ -290,12 +299,23 @@ td {
 /* Productos */
 
 .productos {
-  font-family: Montserrat, Verdana, Tahoma, sans-serif;
+  background-color: blanchedalmond;
+  text-align: center;
+  border: 1px groove rgb(0, 184, 0);
+  border-radius: 1px;
+  font-family: "textoMonkey", Verdana, Tahoma, sans-serif;
+  padding-top: 1vw;
+  padding-left: 5vw;
+  padding-right: 5vw;
+  padding-bottom: 2vw;
+  font-size: 1.5vw;
 }
 
 .tit-prod {
   text-align: center;
   margin: 10px 0;
+  font-size: clamp(16px, 6vw, 70px);
+  color: rgb(130, 66, 20);
 }
 
 .prod-container {
@@ -314,7 +334,9 @@ td {
 .item-tit {
   text-align: center;
   margin-bottom: 8px;
-
+  font-size: clamp(16px, 4vw, 30px);
+  font-weight: 600;
+  color: rgb(173, 87, 25);
 }
 
 .imagen-card {
@@ -334,6 +356,7 @@ td {
 .descripcion {
   width: 280px;
   margin-bottom: 8px;
+  font-size: clamp(14px, 3.5vw, 30px);
 }
 
 .botonera {
@@ -341,9 +364,9 @@ td {
 }
 
 .btn-agregar {
-  background-color: #2c408a;
+  background-color: #576ec2;
   color: antiquewhite;
-  font-size: 24px;
+  font-size: 20px;
   padding: 8px;
   border-radius: 8px;
 }
@@ -357,39 +380,52 @@ td {
 
 .footer {
   background-color:rgb(16, 36, 189);
-  color: rgb(255, 255, 255);
-  font-family: fantasy;
+  color: azure;
+  font-family: fantasy, Verdana, Tahoma, sans-serif;
   font-style: italic;
-  font-size: 2vw;
+  font-size: clamp(16px, 2vw, 30px);
 
-  padding-top: 0.5vw;
-  padding-bottom: 0.5vw;
+  padding-top: 1vw;
+  padding-bottom: 1vw;
 
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   text-align: center;
+  align-items: center;
+  justify-content: space-evenly;
+  gap: 2vw;
 }
 
-
-/* ACA ESTA EL FOOTER DEL PROFESOR */
-.footer-links {
-  width: 25%;
+.footer-mapa {
+  border: 2px solid white;
+  height: auto;
+  width: 220px;
 }
 
 .footer-ul {
   list-style-type: none;
   font-family: 'BBH Sans Bogle', Verdana, Tahoma, sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  gap: 1vh;
+  font-size: clamp(20px, 2.5vw, 30px);
 }
 
-.footer-mapa {
- width: 50%;
+footer a {
+    color: azure;
+}
+
+
+/* ACA ESTA LO QUE QUEDA DE FOOTER DEL PROFESOR */
+.footer-links {
+  width: 25%;
 }
 
 .footer-redes {
 width: 25%;
 }
 
-footer a {
-    color: azure;
-}
+
+

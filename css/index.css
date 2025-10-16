@@ -31,9 +31,24 @@
       font-style: normal;
     }
 
+.main {
+  background-image: url(../imagenes/fondo3.png);
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.main-productos {
+  background-image: url(../imagenes/fondo4.png);
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+}
 
 .encabezado {
-    background-color:rgba(127, 255, 212, 0.883);
+    background-image: url(../imagenes/FondoHead.png);
+    background-size: contain;
+    /* background-color:rgba(127, 255, 212, 0.883); */
     font-size: clamp(16px, 3vw, 55px);
     font-style: italic;
     font-family: "titulosMonkey";
@@ -45,12 +60,28 @@
     margin-left: 1px; 
 }
 
+.titulohead {
+    font-size: clamp(16px, 3vw, 55px);
+    font-style: italic;
+    font-family: "titulosMonkey";
+    color: brown;
+    /* offset-x | offset-y | blur-radius | color */
+    text-shadow: 2px 2px 2px black;
+    display: flex;
+    align-items: center;
+    padding-bottom: 0px;
+    padding-top: 0px;
+    margin-left: 1px; 
+}
 
 /* Formateo del Nav y las lista de links */
 
 .nav1 {
     border: 1px solid  lightgreen;
-    background-color: rgb(103, 206, 234);
+    background-image: url(../imagenes/FondoNav.png);
+    background-size: cover;
+    background-position: center;
+    /* background-color: rgb(103, 206, 234); */    
     font-family: "NavMonkey";
     color: rgb(235, 235, 235);
     justify-content: space-evenly;
@@ -60,17 +91,41 @@
     font-style: italic;
     font-size: clamp(10px, 1.1vw, 50px);
     padding: 0.5vw;
+    position: sticky;
+    top: 0;
 }
 
+.nav2 {
+    border: 1px solid  lightgreen;
+    background-image: url(../imagenes/FondoNav.png);
+    background-size: cover;
+    /* background-color: rgb(103, 206, 234); */
+    font-family: "NavMonkey";
+    color: rgb(235, 235, 235);
+    /* offset-x | offset-y | blur-radius | color */
+    text-shadow: 2px 2px 2px grey;
+    justify-content: space-evenly;
+    align-content: center;
+    display: flex;
+    flex-direction: row;
+    font-style: italic;
+    font-size: clamp(10px, 1.1vw, 50px);
+    padding: 0.5vw;
+}
 
 .a1 {
     text-decoration: none;
-    color: rgb(0, 136, 255);
+    /* color: rgb(0, 136, 255);*/
+    color: azure;
+    /* offset-x | offset-y | blur-radius | color */
+    text-shadow: 1px 1px 2px black;
 }
 
 .a2 {
     text-decoration: none;
     color: rgb(0, 101, 190);
+    /* offset-x | offset-y | blur-radius | color */
+    text-shadow: 2px 2px 2px black;
 }
 
 .titulo1 {
@@ -95,9 +150,10 @@
 }
 
 
-
 .bienvenida {
-    background-color: blanchedalmond;
+    background-image: url(../imagenes/FondoHead2.png);
+    background-size: contain;
+    /* background-color: blanchedalmond; */
     text-align: center;
     border: 1px groove rgb(0, 184, 0);
     border-radius: 1px;
@@ -109,12 +165,172 @@
     font-size: 1.5vw;
 }
 
+
+/* Resumenes */
+
+.resumen {
+  /* background-color: blanchedalmond; */
+  text-align: center;
+  border: 1px groove green;
+  font-family: "textoMonkey", Verdana, Tahoma, sans-serif;
+  padding-top: 1vw;
+  padding-left: 5vw;
+  padding-right: 5vw;
+  padding-bottom: 2vw;
+  font-size: clamp(12px, 1.5vw, 30px);
+}
+
+.resum-container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.resum-item {
+  background-color: rgba(255, 235, 205, 0.64);
+  border: 6px ridge rgb(1, 149, 1);
+  border-radius: 8px;
+  padding: 8px;
+}
+
+.tituloR {
+  font-size: clamp(24px, 3vw, 36px); /* antes 3vw font-size: clamp(minimum, preferred, maximum) */
+  text-decoration: underline;
+  text-align: center;
+  margin: 10px;
+}
+
+.portada {
+  border: 2px solid black;
+  width: 280px;
+  height: auto;
+}
+
+.audio1 {
+  /* width: 25vw; */
+  height: auto;
+  min-height: 20px;
+}
+
+.resum-texto {
+  width: 360px;
+  text-align: center;
+  font-size: clamp(16px, 3vw, 36px);
+  margin: 0 auto;
+  margin-bottom: 8px;
+}
+
+.intro {
+  text-decoration: none;
+  color: rgb(159, 80, 24);
+  font-size: 3vw;
+  padding-bottom: 16px;
+}
+
+.intro:hover {
+  text-decoration: none;
+  color: rgb(219, 113, 37);
+  font-size: 4vw;
+}
+
+.resum-tit-cap {
+  font-size: clamp(16px, 1.5vw, 30px); /* font-size: clamp(minimum, preferred, maximum) */
+}
+
+/* Productos */
+
+.productos {
+  /* background-color: blanchedalmond; */
+  text-align: center;
+  border: 1px groove rgb(0, 184, 0);
+  border-radius: 1px;
+  font-family: "textoMonkey", Verdana, Tahoma, sans-serif;
+  padding-top: 1vw;
+  padding-left: 5vw;
+  padding-right: 5vw;
+  padding-bottom: 2vw;
+  font-size: 1.5vw;
+}
+
+.tit-prod {
+  text-align: center;
+  margin: 10px 0;
+  font-size: clamp(16px, 6vw, 70px);
+  border: 2px solid black;
+  border-radius: 8px;
+  background-color: rgba(255, 235, 205, 0.863);
+  color: rgb(130, 66, 20);
+}
+
+.prod-container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.prod-item {
+  background-color: rgba(255, 235, 205, 0.838);
+  border: 4px groove darkgreen;
+  border-radius: 8px;
+  padding: 8px;
+}
+
+.item-tit {
+  text-align: center;
+  margin-bottom: 8px;
+  font-size: clamp(16px, 4vw, 30px);
+  font-weight: 600;
+  color: rgb(173, 87, 25);
+}
+
+.imagen-card {
+  width: 280px;
+  border: 2px solid black;
+}
+
+.precio {
+  font-size: 24px;
+  font-weight: 600;
+  margin: 8px 0;
+}
+
+.off {
+  color: green;
+}
+
+.descripcion {
+  width: 280px;
+  margin-bottom: 8px;
+  font-size: clamp(14px, 3.5vw, 30px);
+}
+
+.botonera {
+  text-align: center;
+}
+
+.btn-agregar {
+  background-color: #576ec2;
+  color: antiquewhite;
+  font-size: 20px;
+  padding: 8px;
+  border-radius: 8px;
+}
+
+.btn-agregar:hover {
+  background-color: #041550;
+}
+
+
 /* Formulario / Contacto */
 
 .contacto {
-  background-color: blanchedalmond;
+  background-image: url(../imagenes/FondoHead2.png);
+  background-size: contain;
+  /* background-color: blanchedalmond; */
   text-align: center;
-  border: 1px groove rgb(0, 184, 0);
+  border: 1px groove rgb(184, 95, 0);
   border-radius: 1px;
   font-family: "textoMonkey", Verdana, Tahoma, sans-serif;
   padding-top: 1vw;
@@ -140,9 +356,9 @@
 }
 
 .formulario {
-  background-color: rgb(216, 182, 130);
+  background-color: rgba(188, 159, 116, 0.674);
   font-size: clamp(20px, 4vw, 30px);
-  border: 2px solid rgb(170, 155, 196);
+  border: 2px groove black;
   border-radius: 8px;
   width: auto;
   min-width: 330px;
@@ -195,7 +411,9 @@ select {
 .registrados {
   display: flex;
   flex-direction: column;
-  background-color: blanchedalmond;
+  background-image: url(../imagenes/FondoHead2.png);
+  background-size: contain;
+  /* background-color: blanchedalmond; */
   text-align: center;
   font-family: "textoMonkey", Verdana, Tahoma, sans-serif;
   font-size: 1.5vw;
@@ -213,11 +431,12 @@ select {
 }
 
 .tabla {
-    width: 90vw; /* O un ancho específico */
-    margin: 0 auto; /* Centra la tabla horizontalmente */
-    max-width: 1000px;
-    border: 2px solid rgb(0, 1, 79); 
-    border-collapse: collapse
+  width: 90vw; /* O un ancho específico */
+  margin: 0 auto; /* Centra la tabla horizontalmente */
+  max-width: 1000px;
+  border: 2px solid rgb(0, 1, 79); 
+  font-size: clamp(12px, 2vw, 24px);
+  border-collapse: collapse
 }
 
 th {
@@ -229,157 +448,10 @@ td {
 }
 
 
-/* Resumenes */
-
-.resumen {
-  background-color: blanchedalmond;
-  text-align: center;
-  border: 1px groove green;
-  font-family: "textoMonkey", Verdana, Tahoma, sans-serif;
-  padding-top: 1vw;
-  padding-left: 5vw;
-  padding-right: 5vw;
-  padding-bottom: 2vw;
-  font-size: clamp(12px, 1.5vw, 30px);
-}
-
-.resum-container {
-  display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
-  gap: 16px;
-}
-
-.resum-item {
-  border: 6px ridge rgb(1, 149, 1);
-  border-radius: 8px;
-  padding: 8px;
-}
-
-.tituloR {
-    font-size: clamp(10px, 3vw, 36px); /* antes 3vw font-size: clamp(minimum, preferred, maximum) */
-    text-decoration: underline;
-    text-align: center;
-    margin: 10px;
-}
-
-.portada {
-    width: 280px;
-    height: auto;
-}
-
-.audio1 {
-
-    /* width: 25vw; */
-    height: auto;
-}
-
-.resum-texto {
-  width: 360px;
-  margin-bottom: 8px;
-  text-align: center;
-}
-
-.intro {
-  text-decoration: none;
-  color: rgb(159, 80, 24);
-  font-size: 3vw;
-}
-
-.intro:hover {
-  text-decoration: none;
-  color: rgb(219, 113, 37);
-  font-size: 4vw;
-}
-
-.resum-tit-cap {
-  font-size: clamp(5px, 1.5vw, 30px); /* font-size: clamp(minimum, preferred, maximum) */
-}
-
-/* Productos */
-
-.productos {
-  background-color: blanchedalmond;
-  text-align: center;
-  border: 1px groove rgb(0, 184, 0);
-  border-radius: 1px;
-  font-family: "textoMonkey", Verdana, Tahoma, sans-serif;
-  padding-top: 1vw;
-  padding-left: 5vw;
-  padding-right: 5vw;
-  padding-bottom: 2vw;
-  font-size: 1.5vw;
-}
-
-.tit-prod {
-  text-align: center;
-  margin: 10px 0;
-  font-size: clamp(16px, 6vw, 70px);
-  color: rgb(130, 66, 20);
-}
-
-.prod-container {
-  display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
-  gap: 16px;
-}
-
-.prod-item {
-  border: 2px solid darkblue;
-  border-radius: 8px;
-  padding: 8px;
-}
-
-.item-tit {
-  text-align: center;
-  margin-bottom: 8px;
-  font-size: clamp(16px, 4vw, 30px);
-  font-weight: 600;
-  color: rgb(173, 87, 25);
-}
-
-.imagen-card {
-  width: 280px;
-}
-
-.precio {
-  font-size: 24px;
-  font-weight: 600;
-  margin: 8px 0;
-}
-
-.off {
-  color: green;
-}
-
-.descripcion {
-  width: 280px;
-  margin-bottom: 8px;
-  font-size: clamp(14px, 3.5vw, 30px);
-}
-
-.botonera {
-  text-align: center;
-}
-
-.btn-agregar {
-  background-color: #576ec2;
-  color: antiquewhite;
-  font-size: 20px;
-  padding: 8px;
-  border-radius: 8px;
-}
-
-.btn-agregar:hover {
-  background-color: #041550;
-}
-
-
 /* FOOTER */
 
 .footer {
-  background-color:rgb(16, 36, 189);
+  background-color:rgb(16, 32, 153);
   color: azure;
   font-family: fantasy, Verdana, Tahoma, sans-serif;
   font-style: italic;
@@ -412,20 +484,42 @@ td {
   gap: 1vh;
   font-size: clamp(20px, 2.5vw, 30px);
 }
+.footer-ul > li:hover {
+  color: rgb(0, 255, 255);
+  cursor: pointer;
+}
 
 footer a {
     color: azure;
 }
 
+@media only screen and (max-width: 768px) {
+  .footer {
+    flex-direction: column;
+  }
 
-/* ACA ESTA LO QUE QUEDA DE FOOTER DEL PROFESOR */
-.footer-links {
-  width: 25%;
+  .nav2 {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: none;
+    gap: 8px;
+    text-shadow: none;
+
+  }
+
+  .nav2 > ul {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .a2 {
+    text-shadow: none;
+  }
+
+  .contacto {
+    background-size: cover;
+  }
 }
-
-.footer-redes {
-width: 25%;
-}
-
-
 

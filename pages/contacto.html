@@ -8,12 +8,13 @@
     <title>La Isla de los Monos - Contacto</title>
 </head>
 <body>
-    <header class="encabezado">
-    <h1 class="encabezado" id="Inicio"><img class="encabezado" src="../imagenes/Thesecretofmonkeyisland-logo.png" alt="Logo" width="25%" height="auto" ><strong class="titulohead">The Secret Of Monkey Island - Fan Page</strong></h1>
+    <header class="encabezado" id="Inicio">
+        <img class="encabezado" src="../imagenes/Thesecretofmonkeyisland-logo.png" alt="Logo" width="20%" height="auto">
+        <h1><strong class="titulohead">The Secret Of Monkey Island - Fan Page</strong></h1>
     </header>
-        
-    <nav class="nav1">
-        <ul class="ul1">
+    
+    <nav class="nav1" aria-label="Navegación principal">
+        <ul class="menu-principal">
             <li><a href="#Form_ingreso" class="a1"><Strong>Registracion</Strong></a></li>
             <li><a href="#Registrados" class="a1"><strong>Lista de aportantes principales</strong></a></li>
             <li><a href="../index.html" class="a1"><strong>Volver</strong></a></li>
@@ -27,14 +28,18 @@
         <h2 class="subtit-contacto" id="Form_ingreso">Formulario de ingreso de datos</h2>
         <div class="form-container">
         <form class="formulario" action="https://formspree.io/f/mpwyaopd" method="POST">
+            <fieldset>
             <label for="nombre">Nombre:</label>
             <input type="text" id="nombre" name="nombre" required placeholder="Pepe"><br>
             <label for="apellido">Apellido:</label>
             <input type="text" id="apellido" name="apellido" placeholder="Sanchez"><br>
-            <label for="e-mail":>E-mail:</label>
+            <label for="e-mail">E-mail:</label>
             <input type="email" name="email" id="e-mail" required placeholder="abcd@abcd.com.ar"> <br>
-            <label for="telefono":>Teléfono:</label>
+            <label for="telefono">Teléfono:</label>
             <input type="number" name="telefono" id="telefono" required placeholder="01112345678"> <br>
+            </fieldset>
+
+            <fieldset>
             <label> Mensaje:  </label>
             <textarea class="mensaje" name="message" rows="4"></textarea><br>
 
@@ -60,6 +65,7 @@
             <label for="opS">Si</label>
             <input type="radio" id="opN" name="mail-list" value="No" required>
             <label for="opN">No</label><br>
+            </fieldset>
         <button class="btn-enviar" type="reset">Borrar</button>
         <button class="btn-enviar" type="submit">Enviar</button>
         </form>
@@ -106,21 +112,24 @@
                 <td>IJones@threeheadmonkey.com</td>
                 <td>Chicago</td>
             </tr>
-            <tr>
-                <td colspan="2">Cantidad de usuarios registrados</td>
-                <td colspan="2" style="text-align: center;">4</td>
-            </tr>
             </tbody>
+            <tfoot>
+                <tr>
+                    <td colspan="2">Cantidad de usuarios registrados</td>
+                    <td colspan="2" style="text-align:center;">4</td>
+                </tr>
+            </tfoot>
         </table>
         </div>
     </section>
- <footer class="footer">
+
+    <footer class="footer">
         <div><p> Todos los derechos fueron reservados por <em><strong>Sergio Zen</strong></em>.</p>
         <i class="fa-solid fa-square-envelope"></i>
         <a href="mailto:sergioeezzz@gmail.com.ar">Enviar correo</a></div>
         
         <div>
-            <ul class="footer-ul">
+            <ul class="footer-ul" aria-label="Redes sociales">
             <li><i class="fa-brands fa-discord"></i></li>
             <li><i class="fa-brands fa-whatsapp"></i></li>
             <li><i class="fa-brands fa-instagram"></i></li>
@@ -130,6 +139,7 @@
 
         <div>
             <iframe class="footer-mapa" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15759800.400633289!2d-74.15999885!3d15.343549999999997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8c05740f2d973079%3A0x74e7300c2d25f9bc!2sMar%20Caribe!5e0!3m2!1ses-419!2sar!4v1760451617842!5m2!1ses-419!2sar"
+            title="Mapa del Mar Caribe"
             allowfullscreen=""
             loading="lazy"
             referrerpolicy="no-referrer-when-downgrade">

@@ -3,11 +3,16 @@
     box-sizing: border-box;
 }
 
+body {
+  line-height: 1.4;
+}
+
 @font-face {
       font-family: "NavMonkey";
       src: url("../fonts/lucasarts-scumm-solid.otf") format("woff");
       font-weight: normal;
       font-style: normal;
+      font-display: swap;
     }
 
 @font-face {
@@ -15,6 +20,7 @@
       src: url("../fonts/WEATHERD.TTF") format("woff");
       font-weight: normal;
       font-style: normal;
+      font-display: swap;
     }
 
 @font-face {
@@ -22,6 +28,7 @@
       src: url("../fonts/Trattatello-wc.ttf") format("woff");
       font-weight: normal;
       font-style: normal;
+      font-display: swap;
     }
 
 @font-face {
@@ -29,24 +36,25 @@
       src: url("../fonts/lucasarts-scumm-credits.otf") format("woff");
       font-weight: normal;
       font-style: normal;
+      font-display: swap;
     }
 
 .main {
-  background-image: url(../imagenes/fondo3.png);
+  background-image: url(../imagenes/fondo3_M.jpg);
   background-position: center;
   background-size: cover;
   background-attachment: fixed;
 }
 
 .main-productos {
-  background-image: url(../imagenes/fondo4.png);
+  background-image: url(../imagenes/fondo4_M.jpg);
   background-position: center;
   background-size: cover;
   background-attachment: fixed;
 }
 
 .encabezado {
-    background-image: url(../imagenes/FondoHead.png);
+    background-image: url(../imagenes/FondoHead_M.jpg);
     background-size: contain;
     /* background-color:rgba(127, 255, 212, 0.883); */
     font-size: clamp(16px, 3vw, 55px);
@@ -77,8 +85,7 @@
 /* Formateo del Nav y las lista de links */
 
 .nav1 {
-    border: 1px solid  lightgreen;
-    background-image: url(../imagenes/FondoNav.png);
+    background-image: url(../imagenes/FondoNav_M.jpg);
     background-size: cover;
     background-position: center;
     /* background-color: rgb(103, 206, 234); */    
@@ -96,15 +103,15 @@
 }
 
 .nav2 {
-    border: 1px solid  lightgreen;
-    background-image: url(../imagenes/FondoNav.png);
+    border: 1px solid rgba(0, 0, 0, 0.609);
+    background-image: url(../imagenes/FondoNav_M.jpg);
     background-size: cover;
     /* background-color: rgb(103, 206, 234); */
     font-family: "NavMonkey";
     color: rgb(235, 235, 235);
     /* offset-x | offset-y | blur-radius | color */
     text-shadow: 2px 2px 2px grey;
-    justify-content: space-evenly;
+    justify-content: space-around;
     align-content: center;
     display: flex;
     flex-direction: row;
@@ -128,18 +135,31 @@
     text-shadow: 2px 2px 2px black;
 }
 
+nav a:focus {
+  text-shadow: 4px 4px 3px rgb(0, 0, 0);
+}
+
 .titulo1 {
     font-size: 3vw;
     text-decoration: underline;
 }
 
 
-.ul1 {
+.menu-principal {
     list-style: none;
     display: flex;
     flex-direction: row;
     align-items: center;
     padding-left: 5px; /* Lo agregué porque aparecía un padding left de 40px por alguna razón */
+    gap: 40px;
+}
+
+.menu-resumen {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    /* padding-left: 5px;  Lo agregué porque aparecía un padding left de 40px por alguna razón */
     gap: 40px;
 }
 
@@ -151,7 +171,7 @@
 
 
 .bienvenida {
-    background-image: url(../imagenes/FondoHead2.png);
+    background-image: url(../imagenes/FondoHead2_M.jpg);
     background-size: contain;
     /* background-color: blanchedalmond; */
     text-align: center;
@@ -192,6 +212,10 @@
   border: 6px ridge rgb(1, 149, 1);
   border-radius: 8px;
   padding: 8px;
+  
+  flex: 1 1 450px; /* permite que se ajusten y bajen de línea */
+  max-width: 90vw;
+
 }
 
 .tituloR {
@@ -214,11 +238,13 @@
 }
 
 .resum-texto {
-  width: 360px;
+  width: 80%;
+  min-width: 300;
   text-align: center;
   font-size: clamp(16px, 3vw, 36px);
   margin: 0 auto;
   margin-bottom: 8px;
+
 }
 
 .intro {
@@ -257,10 +283,12 @@
   text-align: center;
   margin: 10px 0;
   font-size: clamp(16px, 6vw, 70px);
+  text-shadow: 1px 1px 1px black;
   border: 2px solid black;
   border-radius: 8px;
   background-color: rgba(255, 235, 205, 0.863);
   color: rgb(130, 66, 20);
+  padding-bottom: 1vw;
 }
 
 .prod-container {
@@ -277,8 +305,15 @@
   padding: 8px;
 }
 
+.prod-item:hover {
+  transform: scale(1.03);
+  transition: transform 0.2s ease;
+}
+
+
 .item-tit {
   text-align: center;
+  text-shadow: 1px 1px 1px black;
   margin-bottom: 8px;
   font-size: clamp(16px, 4vw, 30px);
   font-weight: 600;
@@ -302,7 +337,9 @@
 
 .descripcion {
   width: 280px;
+  margin: 0 auto;
   margin-bottom: 8px;
+  text-align: center;
   font-size: clamp(14px, 3.5vw, 30px);
 }
 
@@ -325,8 +362,12 @@
 
 /* Formulario / Contacto */
 
+fieldset {
+  border: none;
+}
+
 .contacto {
-  background-image: url(../imagenes/FondoHead2.png);
+  background-image: url(../imagenes/FondoHead2_M.jpg);
   background-size: contain;
   /* background-color: blanchedalmond; */
   text-align: center;
@@ -362,7 +403,8 @@
   border-radius: 8px;
   width: auto;
   min-width: 330px;
-  margin: auto;
+  max-width: 80vw;
+  margin: 0 auto;
   padding-top: 1vh;
 }
 
@@ -380,10 +422,12 @@
   color: #e9eefc;
   font-size: 16px;
   border-radius: 8px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 .btn-enviar:hover {
   background-color: #4b4b04;
+  transform: scale(1.05);
 }
 
 input[type=text],[type=email], [type=number], textarea {
@@ -405,13 +449,21 @@ select {
   max-width: 300px;
 }
 
+input:focus, textarea:focus, select:focus {
+  outline: 2px solid #041550;
+  outline-offset: 0px;
+}
+
+.formulario input, .formulario textarea, .formulario select {
+  margin-bottom: 12px;
+}
 
 /* Tabla de registrados */
 
 .registrados {
   display: flex;
   flex-direction: column;
-  background-image: url(../imagenes/FondoHead2.png);
+  background-image: url(../imagenes/FondoHead2_M.jpg);
   background-size: contain;
   /* background-color: blanchedalmond; */
   text-align: center;
@@ -493,6 +545,9 @@ footer a {
     color: azure;
 }
 
+
+/* Incorporación de media Queries */
+
 @media only screen and (max-width: 768px) {
   .footer {
     flex-direction: column;
@@ -504,7 +559,7 @@ footer a {
     flex-direction: column;
     justify-content: none;
     gap: 8px;
-    text-shadow: none;
+    text-shadow: 1px 1px 1px rgba(0,0,0,0.5);
 
   }
 
@@ -515,7 +570,7 @@ footer a {
   }
 
   .a2 {
-    text-shadow: none;
+    text-shadow: 1px 1px 1px rgba(0,0,0,0.5);
   }
 
   .contacto {
@@ -523,3 +578,129 @@ footer a {
   }
 }
 
+/* IA Correcciones */
+
+
+@media only screen and (max-width: 480px) {
+  .nav1, .nav2 {
+    flex-direction: column;
+    gap: 6px;
+    font-size: clamp(12px, 4vw, 20px);
+  }
+
+  .menu-principal, .menu-resumen {
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+  }
+}
+
+@media (max-width: 600px) {
+  .resum-container {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.prod-item {
+  flex: 1 1 300px;
+  max-width: 90vw;
+}
+
+.imagen-card {
+  width: 100%;
+  max-width: 280px;
+  height: auto;
+}
+
+@media (max-width: 600px) {
+  .formulario {
+    width: 90vw;
+    font-size: clamp(14px, 4vw, 24px);
+  }
+
+  input, select, textarea {
+    width: 100%;
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer {
+    font-size: clamp(12px, 3vw, 20px);
+    gap: 12px;
+    text-align: center;
+    flex-direction: column;
+    }
+  
+  .footer-mapa {
+    width: 180px;
+  }
+}
+
+/* CSS de IA FORM */
+
+@media (max-width: 768px) {
+  .formulario {
+    width: 90vw;
+    max-width: 85vw;
+    font-size: clamp(14px, 4vw, 24px);
+  }
+
+  input, select, textarea {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .contacto {
+    padding: 4vw;
+    padding-left: 1px;
+    background-size: cover;
+  }
+
+  .tabla {
+    width: 95vw;
+    font-size: clamp(10px, 3vw, 20px);
+  }
+
+  th, td {
+    padding: 4px;
+  }
+}
+
+
+/* GRID */
+/*
+body {
+  display: grid;
+  grid-template-areas:
+    "header header header"
+    "aside main side"
+    "footer footer footer";
+  grid-template-columns: 1fr 2fr 1fr;
+  gap: 1rem;
+}
+
+header { grid-area: header; }
+main { grid-area: main; }
+aside.left { grid-area: aside; }
+aside.right { grid-area: side; }
+footer { grid-area: footer; }
+
+*/
+
+/* Responsivo */
+
+/*
+@media (max-width: 800px) {
+  body {
+    grid-template-areas:
+      "header"
+      "main"
+      "aside"
+      "side"
+      "footer";
+    grid-template-columns: 1fr;
+  }
+}
+*/

@@ -3,10 +3,12 @@
 <head>
     <link rel="stylesheet" href="../css/index.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="icon" href="../imagenes/Mono.ico" type="image/x-icon">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>La Isla de los Monos - Contacto</title>
 </head>
+
 <body>
     <header class="encabezado" id="Inicio">
         <img class="encabezado" src="../imagenes/Thesecretofmonkeyisland-logo.png" alt="Logo" width="20%" height="auto">
@@ -27,44 +29,80 @@
         <p class="subtit-contacto">Por favor, ingrese sus datos para que podamos contactarlo... muchas gracias! <img src="../imagenes/3headmonkey-somi.webp" alt="Logo capibara" width="5%" height="auto"></p>
         <h2 class="subtit-contacto" id="Form_ingreso">Formulario de ingreso de datos</h2>
         <div class="form-container">
-        <form class="formulario" action="https://formspree.io/f/mpwyaopd" method="POST">
+        <form class="formulario" action="https://formspree.io/f/mpwyaopd" method="POST" novalidate>
             <fieldset>
-            <label for="nombre">Nombre:</label>
-            <input type="text" id="nombre" name="nombre" required placeholder="Pepe"><br>
-            <label for="apellido">Apellido:</label>
-            <input type="text" id="apellido" name="apellido" placeholder="Sanchez"><br>
-            <label for="e-mail">E-mail:</label>
-            <input type="email" name="email" id="e-mail" required placeholder="abcd@abcd.com.ar"> <br>
-            <label for="telefono">Teléfono:</label>
-            <input type="number" name="telefono" id="telefono" required placeholder="01112345678"> <br>
+            <div class="form-group">
+                <div class="form-row">
+                    <label for="nombre">Nombre:</label>
+                    <input type="text" id="nombre" name="nombre" required placeholder="Pepe">
+                </div>
+                <span class="error-msg" id="error-nombre"></span>
+            </div>
+            <div class="form-group">
+                <div class="form-row">
+                    <label for="apellido">Apellido:</label>
+                    <input type="text" id="apellido" name="apellido" placeholder="Sanchez">
+                </div>
+                <span class="error-msg" id="error-nombre"></span>
+            </div>
+            <div class="form-group">
+                <div class="form-row">
+                    <label for="e-mail">E-mail:</label>
+                    <input type="email" name="email" id="email" required placeholder="abcd@abcd.com.ar">
+                </div>
+                <span class="error-msg" id="error-nombre"></span>
+            </div>
+            <div class="form-group">
+                <div class="form-row">
+                    <label for="telefono">Teléfono:</label>
+                    <input type="text" name="telefono" id="telefono" novalidate placeholder="01112345678">
+                </div>
+                <span class="error-msg" id="error-nombre"></span>
+            </div>
             </fieldset>
 
             <fieldset>
-            <label> Mensaje:  </label>
-            <textarea class="mensaje" name="message" rows="4"></textarea><br>
+            <div class="form-group">
+                <label>Mensaje:</label>
+                <textarea class="mensaje" name="message" rows="4"></textarea><br>
+                <span class="error"></span>
+            </div>
 
-            <label for="juegofav">Para ajustar tus intereses, ¿nos dirías cuál es tu juego favorito?:</label>
-            <select name="juegos" id="juegofav">
-            <optgroup label="De aventura retro">
-                <option value="1a">The Secret of Monkey Island</option>
-                <option value="2a">Indiana Jones and The Last Cruzade</option>
-                <option value="3a">The Dig</option>
-                <option value="4a">Maniac Mansion</option>
-                <option value="5a">Cualquiera hecho por "LucasArts"</option>
-            </optgroup>
-                <optgroup label="De aventura actual">
-                <option value="1b">La fuga de Deponia</option>
-                <option value="2b">Sam & Max</option>
-                <option value="3b">Machinarium</option>
-                <option value="4b">Cualquiera hecho por "Tell Tale Games"</option>
-            </optgroup>
-            </select>
+            <div class="form-group">
+                <label for="juegofav">Para ajustar tus intereses, ¿nos dirías cuál es tu juego favorito?:</label>
+                <select name="juegos" id="juegofav">
+                    <option value="">Seleccione una opción</option>
+                    <optgroup label="De aventura retro">
+                        <option value="1a">The Secret of Monkey Island</option>
+                        <option value="2a">Indiana Jones and The Last Cruzade</option>
+                        <option value="3a">The Dig</option>
+                        <option value="4a">Maniac Mansion</option>
+                        <option value="5a">Cualquiera hecho por "LucasArts"</option>
+                    </optgroup>
+                    <optgroup label="De aventura actual">
+                        <option value="1b">La fuga de Deponia</option>
+                        <option value="2b">Sam & Max</option>
+                        <option value="3b">Machinarium</option>
+                        <option value="4b">Cualquiera hecho por "Tell Tale Games"</option>
+                    </optgroup>
+                </select>
+                <span class="error-msg"></span>
+            </div>
 
-            <p>¿Desea recibir notificaciones de ofertas y/o anuncios?</p>
-            <input type="radio" id="opS" name="mail-list" value="Si" required>
-            <label for="opS">Si</label>
-            <input type="radio" id="opN" name="mail-list" value="No" required>
-            <label for="opN">No</label><br>
+            <div class="form-group">
+                <p>¿Desea recibir notificaciones de ofertas y/o anuncios?</p>
+                <div class="form-rowRadios">
+                    <div class="radio-group">
+                    <label for="opS">Si</label>
+                    <input type="radio" id="opS" name="mail-list" value="Si" required>
+                    </div>
+                    <div class="radio-group">
+                        <label for="opN">No</label>
+                        <input type="radio" id="opN" name="mail-list" value="No" required>
+                    </div>
+                </div>
+                <span class="error-msg"></span>
+            </div>
             </fieldset>
         <button class="btn-enviar" type="reset">Borrar</button>
         <button class="btn-enviar" type="submit">Enviar</button>
@@ -146,5 +184,12 @@
             </iframe>
         </div>
     </footer>
+        <!-- Pop-up para mostrar en lugar de un alert-->
+        <div id="mi-popup" class="hidden"> <!-- class="mi-popup hidden" -->
+            <div class="mi-popup-content">
+                <p>¡Mensaje enviado exitosamente, ¡pirata! 🏴‍☠️</p>
+            </div>
+        </div>
+        <script src="../js/contacto.js"></script>
 </body>
 </html>

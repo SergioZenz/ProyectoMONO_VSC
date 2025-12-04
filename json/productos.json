@@ -1,0 +1,66 @@
+[
+    {
+      "id" : 1,
+      "name": "The Secret Of Monkey Island",
+      "image": "../imagenes/Monkey1.jpg",
+      "price": 11.11,
+      "desc": 15,
+      "description": "El primero de la saga!!!"
+    },
+    {
+      "id" : 2,
+      "name": "Monkey Island 2: LeChuck`s Revenge",
+      "image": "../imagenes/Monkey2.jpg",
+      "price": 15.15,
+      "desc": 15,
+      "description": "Continuá con este..."
+    },
+    {
+      "id" : 3,
+      "name": "The Curse of Monkey Island",
+      "image": "../imagenes/Monkey3.jpg",
+      "price": 20.25,
+      "desc": 15,
+      "description": "Dale fin a la saga!!!"
+    },
+    {
+      "id" : 4,
+      "name": "Escape from Monkey Island",
+      "image": "../imagenes/Monkey4.jpg",
+      "price": 24.44,
+      "desc": 10,
+      "description": "Comenzá con el primero de la saga actual!!!"
+    },
+    {
+      "id" : 5,
+      "name": "Tales of Monkey Island",
+      "image": "../imagenes/Monkey5.jpg",
+      "price": 30.00,
+      "desc": 10,
+      "description": "El juego se transforma en historia..."
+    },
+    {
+      "id" : 6,
+      "name": "Return to Monkey Island",
+      "image": "../imagenes/Monkey6.jpg",
+      "price": 30.99,
+      "desc": 10,
+      "description": "Vuelve a la isla de los monos!!!"
+    },
+    {
+      "id" : 7,
+      "name": "Combo Saga Clasica!!",
+      "image": "../imagenes/Combo123.jpg",
+      "price": 40.00,
+      "desc": 20,
+      "description": "Aprovechá la oferta y comprá las 3 primeras aventuras en pack!!!"
+    },
+    {
+      "id" : 8,
+      "name": "Pack Super Aventura",
+      "image": "../imagenes/ComboAdventClasicas.jpg",
+      "price": 40.00,
+      "desc": 20,
+      "description": "Compra el pack y disfruta de una selección de juegos clásicos de aventura!"
+    }
+]   

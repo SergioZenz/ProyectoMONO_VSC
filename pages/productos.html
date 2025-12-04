@@ -3,6 +3,7 @@
 <head>
     <link rel="stylesheet" href="../css/index.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="icon" href="../imagenes/Mono.ico" type="image/x-icon">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>La Isla de los Monos - Productos</title>
@@ -11,7 +12,22 @@
   <header class="encabezado" id="Inicio">
     <img class="encabezado" src="../imagenes/Thesecretofmonkeyisland-logo.png" alt="Logo" width="20%" height="auto">
     <h1><strong class="titulohead">The Secret Of Monkey Island - Fan Page</strong></h1>
-   </header>
+
+    <!-- 🔥 Ícono de Carrito flotante -->
+    <div id="carrito-icono">
+    <svg xmlns="http://www.w3.org/2000/svg" width="46" height="46" viewBox="0 0 24 24"><path fill="currentColor" d="M16 18a2 2 0 0 1 2 2a2 2 0 0 1-2 2a2 2 0 0 1-2-2a2 2 0 0 1 2-2m0 1a1 1 0 0 0-1 1a1 1 0 0 0 1 1a1 1 0 0 0 1-1a1 1 0 0 0-1-1m-9-1a2 2 0 0 1 2 2a2 2 0 0 1-2 2a2 2 0 0 1-2-2a2 2 0 0 1 2-2m0 1a1 1 0 0 0-1 1a1 1 0 0 0 1 1a1 1 0 0 0 1-1a1 1 0 0 0-1-1M18 6H4.27l2.55 6H15c.33 0 .62-.16.8-.4l3-4c.13-.17.2-.38.2-.6a1 1 0 0 0-1-1m-3 7H6.87l-.77 1.56L6 15a1 1 0 0 0 1 1h11v1H7a2 2 0 0 1-2-2a2 2 0 0 1 .25-.97l.72-1.47L2.34 4H1V3h2l.85 2H18a2 2 0 0 1 2 2c0 .5-.17.92-.45 1.26l-2.91 3.89c-.36.51-.96.85-1.64.85"/></svg>
+    <span id="item_cantidad">0</span>
+    </div>
+
+    <!-- 🔥 Contenedor oculto que se desplegará -->
+    <div id="carrito-panel">
+    <h3>🔥 Carrito 🔥</h3>
+    <div id="seccion_favs"></div>
+    <p id="precio_total"></p>
+    <button id="delete_all">Eliminar todo</button>
+    </div>
+
+  </header>
         
     <nav class="nav1" aria-label="Navegación principal">
         <ul class="menu-principal">
@@ -22,165 +38,42 @@
         </ul>
     </nav>
     <main class="main-productos">
+        <!-- SECCIÓN CARRITO -->
+        <section>
+            <div id="seccion_favs" class="seccion-favs" style="display: none;">
+                <div class="flex-favs">
+                    <div id="delete_all" class="fav-left">
+                        <div class="icono-container">
+                            <div class="icono-del">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="96" height="96" viewBox="0 0 24 24"><path fill="currentColor" d="M7.616 20q-.667 0-1.141-.475T6 18.386V6h-.5q-.213 0-.356-.144T5 5.499t.144-.356T5.5 5H9q0-.31.23-.54t.54-.23h4.46q.31 0 .54.23T15 5h3.5q.213 0 .356.144t.144.357t-.144.356T18.5 6H18v12.385q0 .666-.475 1.14t-1.14.475zM17 6H7v12.385q0 .269.173.442t.443.173h8.769q.269 0 .442-.173t.173-.442zm-6.692 11q.213 0 .357-.144t.143-.356v-8q0-.213-.144-.356T10.307 8t-.356.144t-.143.356v8q0 .213.144.356q.144.144.356.144m3.385 0q.213 0 .356-.144t.143-.356v-8q0-.213-.144-.356Q13.904 8 13.692 8q-.213 0-.357.144t-.143.356v8q0 .213.144.356t.357.144M7 6v13z"/>
+                                </svg>
+                            </div>
+                            <div class="hide">Eliminar Todo</div>
+                        </div>
+                    </div>
+
+                    <div class="fav-right">
+                        <div class="icono-container">
+                            <div class="icono-cart">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="96" height="96" viewBox="0 0 24 24"><path fill="currentColor" d="M16 18a2 2 0 0 1 2 2a2 2 0 0 1-2 2a2 2 0 0 1-2-2a2 2 0 0 1 2-2m0 1a1 1 0 0 0-1 1a1 1 0 0 0 1 1a1 1 0 0 0 1-1a1 1 0 0 0-1-1m-9-1a2 2 0 0 1 2 2a2 2 0 0 1-2 2a2 2 0 0 1-2-2a2 2 0 0 1 2-2m0 1a1 1 0 0 0-1 1a1 1 0 0 0 1 1a1 1 0 0 0 1-1a1 1 0 0 0-1-1M18 6H4.27l2.55 6H15c.33 0 .62-.16.8-.4l3-4c.13-.17.2-.38.2-.6a1 1 0 0 0-1-1m-3 7H6.87l-.77 1.56L6 15a1 1 0 0 0 1 1h11v1H7a2 2 0 0 1-2-2a2 2 0 0 1 .25-.97l.72-1.47L2.34 4H1V3h2l.85 2H18a2 2 0 0 1 2 2c0 .5-.17.92-.45 1.26l-2.91 3.89c-.36.51-.96.85-1.64.85"/></svg>
+                            </div>    
+                            <span id="item_cantidad"></span>
+                        </div>
+                    </div>
+                </div>
+
+                <h2 class="tituloCarrito" id="titulo_favs">Carrito de compras</h2>
+                <!-- DIV Total -->
+                <div id="precio_total" class="precio-total"></div>
+            </div>
+        </section>
+
+    <!-- SECCIÓN DE PRODUCTOS -->  
     <section class="productos" id="productos">
       <h2 class="tit-prod" id="juegos">Juegos</h2>
-
-      <div class="prod-container">
-
-        <div class="prod-item">
-          <div class="item-tit">
-            The Secret Of Monkey Island
-          </div>
-          <div class="item-img">
-            <img class="imagen-card" src="../imagenes/Monkey1.jpg" alt="imagen del producto">
-          </div>
-          <div class="datos">
-            <span class="precio">$11.11</span>
-            <span class="off">20% OFF</span>
-            <div class="descripcion">
-              El primero de la saga!!!
-            </div>
-            <div class="botonera">
-              <button class="btn-agregar"><i class="fa-brands fa-steam"></i> Agregar</button>
-            </div>
-          </div>
-        </div>
-
-        <div class="prod-item">
-          <div class="item-tit">
-            Monkey Island 2: LeChuck's Revenge
-          </div>
-          <div class="item-img">
-            <img class="imagen-card" src="../imagenes/Monkey2.jpg" alt="imagen del producto">
-          </div>
-          <div class="datos">
-            <span class="precio">$15.15</span>
-            <span class="off">20% OFF</span>
-            <div class="descripcion">
-              Continuá con este...
-            </div>
-            <div class="botonera">
-              <button class="btn-agregar"><i class="fa-brands fa-steam"></i>  Agregar</button>
-            </div>
-          </div>
-        </div>
-
-        <div class="prod-item">
-          <div class="item-tit">
-            The Curse of Monkey Island
-          </div>
-          <div class="item-img">
-            <img class="imagen-card" src="../imagenes/Monkey3.jpg" alt="imagen del producto">
-          </div>
-          <div class="datos">
-            <span class="precio">$20.25</span>
-            <span class="off">20% OFF</span>
-            <div class="descripcion">
-              Dale fin a la saga!!!
-            </div>
-            <div class="botonera">
-              <button class="btn-agregar"><i class="fa-brands fa-steam"></i>  Agregar</button>
-            </div>
-          </div>
-        </div>
-
-        <div class="prod-item">
-          <div class="item-tit">
-            Escape from Monkey Island
-          </div>
-          <div class="item-img">
-            <img class="imagen-card" src="../imagenes/Monkey4.jpg" alt="imagen del producto">
-          </div>
-          <div class="datos">
-            <span class="precio">$24.44</span>
-            <span class="off">20% OFF</span>
-            <div class="descripcion">
-              Comenzá con el primero de la saga actual!!!
-            </div>
-            <div class="botonera">
-              <button class="btn-agregar"><i class="fa-brands fa-steam"></i>  Agregar</button>
-            </div>
-          </div>
-        </div>
-
-        <div class="prod-item">
-          <div class="item-tit">
-            Tales of Monkey Island
-          </div>
-          <div class="item-img">
-            <img class="imagen-card" src="../imagenes/Monkey5.jpg" alt="imagen del producto">
-          </div>
-          <div class="datos">
-            <span class="precio">$30.00</span>
-            <span class="off">20% OFF</span>
-            <div class="descripcion">
-              El juego se transforma en historia...
-            </div>
-            <div class="botonera">
-              <button class="btn-agregar"><i class="fa-brands fa-steam"></i>  Agregar</button>
-            </div>
-          </div>
-        </div>
-
-        <div class="prod-item">
-          <div class="item-tit">
-            Return to Monkey Island
-          </div>
-          <div class="item-img">
-            <img class="imagen-card" src="../imagenes/Monkey6.jpg" alt="imagen del producto">
-          </div>
-          <div class="datos">
-            <span class="precio">$30.99</span>
-            <span class="off">20% OFF</span>
-            <div class="descripcion">
-              Vuelve a la isla de los monos!!!
-            </div>
-            <div class="botonera">
-              <button class="btn-agregar"><i class="fa-brands fa-steam"></i>  Agregar</button>
-            </div>
-          </div>
-        </div>
-
-          <div class="prod-item">
-          <div class="item-tit">
-            Combo Saga Clasica!!
-          </div>
-          <div class="item-img">
-            <img class="imagen-card" src="../imagenes/Combo123.jpg" alt="imagen del producto">
-          </div>
-          <div class="datos">
-            <span class="precio">$20.00</span>
-            <span class="off">20% OFF</span>
-            <div class="descripcion">
-              Aprovechá la oferta y comprá las 3 primeras aventuras en pack!!!
-            </div>
-            <div class="botonera">
-              <button class="btn-agregar"><i class="fa-brands fa-steam"></i>  Agregar</button>
-            </div>
-          </div>
-        </div>
-
-          <div class="prod-item">
-          <div class="item-tit">
-            Pack Super Aventura
-          </div>
-          <div class="item-img">
-            <img class="imagen-card" src="../imagenes/ComboAdventClasicas.jpg" alt="imagen del producto">
-          </div>
-          <div class="datos">
-            <span class="precio">$40.00</span>
-            <span class="off">20% OFF</span>
-            <div class="descripcion">
-              Compra el pack y disfruta de una selección de juegos clásicos de aventura!
-            </div>
-            <div class="botonera">
-              <button class="btn-agregar"><i class="fa-brands fa-steam"></i>  Agregar</button>
-            </div>
-          </div>
-        </div>
-       
-        
-      </div>
+    
+    <!-- ACA se van a ir cargando por JS los productos desde el JSON-->
+             
     </section>
     </main>
 
@@ -207,5 +100,6 @@
             </iframe>
         </div>
     </footer>
+    <script src="../js/productos.js"></script>
 </body>
 </html>

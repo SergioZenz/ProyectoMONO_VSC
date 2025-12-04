@@ -65,7 +65,7 @@ body {
     align-items: center;
     padding-bottom: 0px;
     padding-top: 0px;
-    margin-left: 1px; 
+    margin-left: 0px; 
 }
 
 .titulohead {
@@ -362,13 +362,89 @@ nav a:focus {
 
 /* Formulario / Contacto */
 
+/* POPUP */
+
+/* Pixel Font opcional — si querés más estilo retro */
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+#mi-popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 9999;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.4s ease;
+}
+
+.mi-popup-content {
+  background: #2b0059; /* violeta Monkey Island */
+  border: 4px solid #ffcc00; /* borde dorado LucasArts */
+  color: #ffdd44;
+  padding: 25px 35px;
+  border-radius: 8px;
+  text-align: center;
+  font-family: 'Press Start 2P', cursive;
+  font-size: 12px;
+  transform: scale(0.2);
+  opacity: 0;
+  box-shadow: 0 0 20px #ffcc00;
+}
+
+#mi-popup.show .mi-popup-content {
+  animation: popIn 9.0s ease-out forwards;
+}
+
+/* ---- Animación estilo cartoon/retro ---- */
+@keyframes popIn {
+  0% {
+    transform: scale(0.2);
+    opacity: 0;
+  }
+  60% {
+    transform: scale(1.15);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+#mi-popup.show {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.hidden {
+  opacity: 0;
+  pointer-events: none;
+  /* display: none; */
+}
+
+
+.popup.error {
+    background: #e53935;
+}
+
+
+/* FIN del POPUP */
+
+
 fieldset {
   border: none;
 }
 
 .contacto {
-  background-image: url(../imagenes/FondoHead2_M.jpg);
-  background-size: contain;
+  background: #ffdab0;
+  background: radial-gradient(circle,rgba(255, 218, 176, 1) 0%, rgba(217, 169, 93, 1) 100%);
+  /* background-image: url(../imagenes/FondoHead2_M.jpg);
+  background-size: contain;  */
   /* background-color: blanchedalmond; */
   text-align: center;
   border: 1px groove rgb(184, 95, 0);
@@ -379,6 +455,9 @@ fieldset {
   padding-right: 5vw;
   padding-bottom: 2vw;
   font-size: 1.5vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .tit-contacto {
@@ -393,7 +472,43 @@ fieldset {
 
 .form-container {
   text-align: center;
+  max-width: 1200px;
   margin: 32px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+}
+
+.form-row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+}
+
+.form-rowRadios {
+    display: flex;  /* para que los radios queden en la misma línea */
+    gap: clamp(1px, 2vw, 40px);    /* espacio entre las dos opciones */
+    align-content: center;
+    justify-content: center;
+}
+
+.radio-group {
+    display: flex;
+    align-items: center;
+    gap: 4px; /* distancia mínima entre el input y el label (pegados) */
+}
+
+.form-row label {
+    width: 120px; /* ajustable */
+    font-weight: bold;
+}
+
+.form-row input, textarea, select {
+    flex: 1;
 }
 
 .formulario {
@@ -445,8 +560,9 @@ input[type=email] {
 }
 
 select {
-  font-size: clamp(4px, 4vw, 30px);
-  max-width: 300px;
+  align-self: center;
+  font-size: clamp(4px, 4vw, 26px);
+  max-width: 600px;
 }
 
 input:focus, textarea:focus, select:focus {
@@ -457,6 +573,7 @@ input:focus, textarea:focus, select:focus {
 .formulario input, .formulario textarea, .formulario select {
   margin-bottom: 12px;
 }
+
 
 /* Tabla de registrados */
 
@@ -669,38 +786,245 @@ footer a {
 }
 
 
-/* GRID */
-/*
-body {
-  display: grid;
-  grid-template-areas:
-    "header header header"
-    "aside main side"
-    "footer footer footer";
-  grid-template-columns: 1fr 2fr 1fr;
-  gap: 1rem;
+/* Estilo de los mensajes de error del formulario */
+
+.error-msg {
+    color: red;
+    font-size: clamp(1.5vw, 15px, 6vw);
+    font-style: oblique;
+    margin-top: 4px;
+    min-height: 1em;
 }
 
-header { grid-area: header; }
-main { grid-area: main; }
-aside.left { grid-area: aside; }
-aside.right { grid-area: side; }
-footer { grid-area: footer; }
-
-*/
-
-/* Responsivo */
-
-/*
-@media (max-width: 800px) {
-  body {
-    grid-template-areas:
-      "header"
-      "main"
-      "aside"
-      "side"
-      "footer";
-    grid-template-columns: 1fr;
-  }
+.error {
+    border-color: red !important;
 }
-*/
+
+
+/* CARRITO DE COMPRAS */
+
+.tituloCarrito {
+  text-align: center;
+  margin: 48px;
+}
+
+.total-favoritos {
+  background-color: red;
+  color: white;
+  border-radius: 8px;
+}
+
+.icono-container {
+  position: relative;
+}
+
+.item-cantidad {
+  position: absolute;
+}
+
+.seccion-favs {
+  border: 2px solid black;
+  background-color: rgb(198, 197, 197);
+}
+
+.contenedor-productos {
+  display: flex;
+  justify-content: space-evenly;
+  gap: 24px;
+}
+
+.flex-favs {
+  display: flex;
+  justify-content: space-between;
+}
+
+.hide {
+  display: none;
+  padding: 8px;
+}
+
+.icono-del:hover + .hide {
+  display: block;
+  color: red;
+  font-size: 16px;
+  border: 2px solid red;
+  background-color: #fff;
+  border-radius: 8px;
+  margin: 24px;
+}
+.card {
+  border: 2px solid black;
+  border-radius: 8px;
+  padding: 24px;
+  overflow-wrap: break-word;
+}
+
+.card-fav img {
+  width: clamp(80px, 5vw ,200px);
+  height: auto;
+}
+
+.fav {
+  background-color: #fff;
+}
+
+.precio-total {
+  border: 2px solid white;
+  border-radius: 8px;
+  color: darkgreen;
+  margin: 24px;
+  padding: 12px;
+}
+
+.btn-add, .btn-del {
+  font-size: 24px;
+  padding: 8px;
+  border-radius: 8px;
+  font-family: Michroma, Verdana, Tahoma, sans-serif;
+}
+
+.btn-del:hover {
+  font-size: 26px;
+  border: solid 2px red;
+  color: red;
+}
+
+.btn-add:hover {
+  font-size: 26px;
+  border: solid 2px green;
+  color: green;
+}
+
+.seccion-favs {
+  margin: 48px;
+}
+
+.contenedor-favoritos {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  margin: 32px;
+}
+
+.icono-container {
+  position: relative;
+}
+
+.icono-cart {
+  text-align: right;
+}
+
+#item_cantidad {
+  position: absolute;
+  top: 0;
+  right: 20px; /* Ajusta la posición horizontal */
+  background-color: red;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 12px;
+}
+
+
+/* CARRITO PERO CON EL ICONO FLOTANDO */
+/* CARRITO PERO CON EL ICONO FLOTANDO */
+
+
+/* Ícono flotante */
+#carrito-icono {
+  position: fixed;
+  top: 15px;
+  right: 15px;
+  background: #ab57ff;
+  color: white;
+  padding: 10px 12px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: clamp(10px, 2vw, 60px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+}
+
+#carrito-icono span {
+  background: #121212;
+  color: #fff;
+  font-size: 12px;
+  padding: 2px 6px;
+  border-radius: 50%;
+  position: absolute;
+  top: -5px;
+  right: -5px;
+}
+
+/* Panel desplegable */
+#carrito-panel {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: clamp(320px, 50vw, 1000px);
+  height: 100vh;
+  background: rgb(222, 199, 165);
+  border-left: 2px solid #ccc;
+  box-shadow: -4px 0 10px rgba(0,0,0,0.2);
+  padding: 20px;
+  display: none;             /* 👈 IMPORTANTE */
+  flex-direction: column;
+  overflow-y: auto;
+  z-index: 998;
+  animation: slide .4s;
+}
+
+#carrito-panel > h3 {
+  font-size: 30px;
+  font-style: oblique;
+}
+
+@keyframes slide {
+  from { transform: translateX(100%); }
+  to { transform: translateX(0); }
+}
+
+/* Cards dentro del carrito */
+.card-fav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+  align-items: center;
+  border: 2px solid black;
+  margin-bottom: 10px;
+  padding: 12px;
+  border-radius: 8px;
+  overflow-wrap: break-word;
+}
+
+#delete_all {
+  font-size: clamp(10px, 2vw, 90px);
+  background-color: #79b6d4;
+  padding: 8px;
+  border-radius: 8px;
+  font-family: Michroma, Verdana, Tahoma, sans-serif;
+}
+
+.btn-del {
+  font-size: clamp(10px, 1.5vw, 90px);
+  background-color: #79b6d4;
+  padding: 8px;
+  border-radius: 8px;
+  font-family: Michroma, Verdana, Tahoma, sans-serif;
+}
+
+.btn-del:hover {
+  font-size: clamp(10px, 1.5vw, 90px);
+  background-color: #576ec2;
+  border: solid 2px red;
+  color: white;
+}

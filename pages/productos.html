@@ -13,6 +13,11 @@
     <img class="encabezado" src="../imagenes/Thesecretofmonkeyisland-logo.png" alt="Logo" width="20%" height="auto">
     <h1><strong class="titulohead">The Secret Of Monkey Island - Fan Page</strong></h1>
 
+    <!-- 🔥 Ícono LOG IN flotante -->
+    <div id="login-icon">
+    <i id="btn-login" class="fa-solid fa-user login-icon"></i>
+    </div>
+
     <!-- 🔥 Ícono de Carrito flotante -->
     <div id="carrito-icono">
     <svg xmlns="http://www.w3.org/2000/svg" width="46" height="46" viewBox="0 0 24 24"><path fill="currentColor" d="M16 18a2 2 0 0 1 2 2a2 2 0 0 1-2 2a2 2 0 0 1-2-2a2 2 0 0 1 2-2m0 1a1 1 0 0 0-1 1a1 1 0 0 0 1 1a1 1 0 0 0 1-1a1 1 0 0 0-1-1m-9-1a2 2 0 0 1 2 2a2 2 0 0 1-2 2a2 2 0 0 1-2-2a2 2 0 0 1 2-2m0 1a1 1 0 0 0-1 1a1 1 0 0 0 1 1a1 1 0 0 0 1-1a1 1 0 0 0-1-1M18 6H4.27l2.55 6H15c.33 0 .62-.16.8-.4l3-4c.13-.17.2-.38.2-.6a1 1 0 0 0-1-1m-3 7H6.87l-.77 1.56L6 15a1 1 0 0 0 1 1h11v1H7a2 2 0 0 1-2-2a2 2 0 0 1 .25-.97l.72-1.47L2.34 4H1V3h2l.85 2H18a2 2 0 0 1 2 2c0 .5-.17.92-.45 1.26l-2.91 3.89c-.36.51-.96.85-1.64.85"/></svg>
@@ -34,39 +39,9 @@
             <li><a href="#juegos" class="a1"><Strong>Comprar los juegos</Strong></a></li>
             <li><a href="" class="a1"><strong>Merch y otras cosas</strong></a></li>
             <li><a href="../index.html" class="a1"><strong>Volver</strong></a></li>
-            <li><a href="" class="a1"><i class="fa-solid fa-user"></i> | <i class="fa-solid fa-cart-shopping"></i></a></li>
         </ul>
     </nav>
     <main class="main-productos">
-        <!-- SECCIÓN CARRITO -->
-        <section>
-            <div id="seccion_favs" class="seccion-favs" style="display: none;">
-                <div class="flex-favs">
-                    <div id="delete_all" class="fav-left">
-                        <div class="icono-container">
-                            <div class="icono-del">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="96" height="96" viewBox="0 0 24 24"><path fill="currentColor" d="M7.616 20q-.667 0-1.141-.475T6 18.386V6h-.5q-.213 0-.356-.144T5 5.499t.144-.356T5.5 5H9q0-.31.23-.54t.54-.23h4.46q.31 0 .54.23T15 5h3.5q.213 0 .356.144t.144.357t-.144.356T18.5 6H18v12.385q0 .666-.475 1.14t-1.14.475zM17 6H7v12.385q0 .269.173.442t.443.173h8.769q.269 0 .442-.173t.173-.442zm-6.692 11q.213 0 .357-.144t.143-.356v-8q0-.213-.144-.356T10.307 8t-.356.144t-.143.356v8q0 .213.144.356q.144.144.356.144m3.385 0q.213 0 .356-.144t.143-.356v-8q0-.213-.144-.356Q13.904 8 13.692 8q-.213 0-.357.144t-.143.356v8q0 .213.144.356t.357.144M7 6v13z"/>
-                                </svg>
-                            </div>
-                            <div class="hide">Eliminar Todo</div>
-                        </div>
-                    </div>
-
-                    <div class="fav-right">
-                        <div class="icono-container">
-                            <div class="icono-cart">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="96" height="96" viewBox="0 0 24 24"><path fill="currentColor" d="M16 18a2 2 0 0 1 2 2a2 2 0 0 1-2 2a2 2 0 0 1-2-2a2 2 0 0 1 2-2m0 1a1 1 0 0 0-1 1a1 1 0 0 0 1 1a1 1 0 0 0 1-1a1 1 0 0 0-1-1m-9-1a2 2 0 0 1 2 2a2 2 0 0 1-2 2a2 2 0 0 1-2-2a2 2 0 0 1 2-2m0 1a1 1 0 0 0-1 1a1 1 0 0 0 1 1a1 1 0 0 0 1-1a1 1 0 0 0-1-1M18 6H4.27l2.55 6H15c.33 0 .62-.16.8-.4l3-4c.13-.17.2-.38.2-.6a1 1 0 0 0-1-1m-3 7H6.87l-.77 1.56L6 15a1 1 0 0 0 1 1h11v1H7a2 2 0 0 1-2-2a2 2 0 0 1 .25-.97l.72-1.47L2.34 4H1V3h2l.85 2H18a2 2 0 0 1 2 2c0 .5-.17.92-.45 1.26l-2.91 3.89c-.36.51-.96.85-1.64.85"/></svg>
-                            </div>    
-                            <span id="item_cantidad"></span>
-                        </div>
-                    </div>
-                </div>
-
-                <h2 class="tituloCarrito" id="titulo_favs">Carrito de compras</h2>
-                <!-- DIV Total -->
-                <div id="precio_total" class="precio-total"></div>
-            </div>
-        </section>
 
     <!-- SECCIÓN DE PRODUCTOS -->  
     <section class="productos" id="productos">
@@ -100,6 +75,21 @@
             </iframe>
         </div>
     </footer>
+
+        <!-- MODAL LOGIN -->
+    <div id="modalLogin" class="modal-login">
+        <div class="modal-content-login">
+            <span id="closeLogin" class="close-login">&times;</span>
+            <h2>Ingresar</h2>
+            <form id="loginForm">
+                <input type="text" id="username" placeholder="Usuario" required>
+                <input type="password" id="password" placeholder="Contraseña" required>
+                <button type="submit" class="btn-login-submit">Confirmar</button>
+            </form>
+        </div>
+    </div>
+
     <script src="../js/productos.js"></script>
+    <script src="../js/login.js"></script>
 </body>
 </html>

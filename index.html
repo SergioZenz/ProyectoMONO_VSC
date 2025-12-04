@@ -13,6 +13,11 @@
     <img class="encabezado" src="./imagenes/Thesecretofmonkeyisland-logo.png" alt="Logo" width="20%" height="auto">
     <h1><strong class="titulohead">The Secret Of Monkey Island - Fan Page</strong></h1>
 
+    <!-- 🔥 Ícono LOG IN flotante -->
+    <div id="login-icon">
+    <i id="btn-login" class="fa-solid fa-user login-icon"></i>
+    </div>
+
     <!-- 🔥 Ícono de Carrito flotante -->
     <div id="carrito-icono">
     <svg xmlns="http://www.w3.org/2000/svg" width="46" height="46" viewBox="0 0 24 24"><path fill="currentColor" d="M16 18a2 2 0 0 1 2 2a2 2 0 0 1-2 2a2 2 0 0 1-2-2a2 2 0 0 1 2-2m0 1a1 1 0 0 0-1 1a1 1 0 0 0 1 1a1 1 0 0 0 1-1a1 1 0 0 0-1-1m-9-1a2 2 0 0 1 2 2a2 2 0 0 1-2 2a2 2 0 0 1-2-2a2 2 0 0 1 2-2m0 1a1 1 0 0 0-1 1a1 1 0 0 0 1 1a1 1 0 0 0 1-1a1 1 0 0 0-1-1M18 6H4.27l2.55 6H15c.33 0 .62-.16.8-.4l3-4c.13-.17.2-.38.2-.6a1 1 0 0 0-1-1m-3 7H6.87l-.77 1.56L6 15a1 1 0 0 0 1 1h11v1H7a2 2 0 0 1-2-2a2 2 0 0 1 .25-.97l.72-1.47L2.34 4H1V3h2l.85 2H18a2 2 0 0 1 2 2c0 .5-.17.92-.45 1.26l-2.91 3.89c-.36.51-.96.85-1.64.85"/></svg>
@@ -34,7 +39,6 @@
             <li><a href="#Inicio" class="a1">Inicio</a></li>
             <li><a href="./pages/productos.html" class="a1">Comprar Merch y demas cosas...</a></li>
             <li><a href="./pages/contacto.html" class="a1">Contacto / Subs</a></li>
-            <li><a href="" class="a1"><i class="fa-solid fa-user"></i> | <i class="fa-solid fa-cart-shopping"></i></a></li>
         </ul>
     </nav>
     <nav class="nav2" aria-label="Selector de reseñas juegos clasicos">
@@ -220,7 +224,22 @@
         </div>
     </footer>
     <div id="demo"></div>
+
+    <!-- MODAL LOGIN -->
+    <div id="modalLogin" class="modal-login">
+        <div class="modal-content-login">
+            <span id="closeLogin" class="close-login">&times;</span>
+            <h2>Ingresar</h2>
+            <form id="loginForm">
+                <input type="text" id="username" placeholder="Usuario" required>
+                <input type="password" id="password" placeholder="Contraseña" required>
+                <button type="submit" class="btn-login-submit">Confirmar</button>
+            </form>
+        </div>
+    </div>
+    
     <script src="./js/index.js"></script>
+    <script src="./js/login.js"></script>
 </body>
 </html>
  

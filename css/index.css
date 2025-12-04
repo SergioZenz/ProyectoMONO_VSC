@@ -803,28 +803,14 @@ footer a {
 
 /* CARRITO DE COMPRAS */
 
-.tituloCarrito {
-  text-align: center;
-  margin: 48px;
-}
-
 .total-favoritos {
   background-color: red;
   color: white;
   border-radius: 8px;
 }
 
-.icono-container {
-  position: relative;
-}
-
 .item-cantidad {
   position: absolute;
-}
-
-.seccion-favs {
-  border: 2px solid black;
-  background-color: rgb(198, 197, 197);
 }
 
 .contenedor-productos {
@@ -833,25 +819,6 @@ footer a {
   gap: 24px;
 }
 
-.flex-favs {
-  display: flex;
-  justify-content: space-between;
-}
-
-.hide {
-  display: none;
-  padding: 8px;
-}
-
-.icono-del:hover + .hide {
-  display: block;
-  color: red;
-  font-size: 16px;
-  border: 2px solid red;
-  background-color: #fff;
-  border-radius: 8px;
-  margin: 24px;
-}
 .card {
   border: 2px solid black;
   border-radius: 8px;
@@ -866,14 +833,6 @@ footer a {
 
 .fav {
   background-color: #fff;
-}
-
-.precio-total {
-  border: 2px solid white;
-  border-radius: 8px;
-  color: darkgreen;
-  margin: 24px;
-  padding: 12px;
 }
 
 .btn-add, .btn-del {
@@ -895,10 +854,6 @@ footer a {
   color: green;
 }
 
-.seccion-favs {
-  margin: 48px;
-}
-
 .contenedor-favoritos {
   display: flex;
   gap: 16px;
@@ -907,13 +862,6 @@ footer a {
   margin: 32px;
 }
 
-.icono-container {
-  position: relative;
-}
-
-.icono-cart {
-  text-align: right;
-}
 
 #item_cantidad {
   position: absolute;
@@ -1028,3 +976,89 @@ footer a {
   border: solid 2px red;
   color: white;
 }
+
+@media (max-width: 900px) {
+  #carrito-panel {
+    width: clamp(320px, 80vw, 1000px);
+  }
+}
+
+
+/* --- LOGIN MODAL --- */
+
+.login-icon {
+  cursor: pointer;
+  margin-right: 100px;
+   
+  position: fixed;
+  top: 15px;
+  right: 15px;
+  background: #576bff;
+  color: white;
+  padding: 10px 12px;
+  border-radius: 50%;
+  border-style:dotted ;
+  border-color: #b3b815;
+  font-size: clamp(20px, 3vw, 40px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+}
+
+
+.modal-login {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.6);
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content-login {
+  background: #2b0059;
+  border: 4px solid #0ea500;
+  padding: 25px 35px;
+  color: #e0bf2c;
+  border-radius: 10px;
+  text-align: center;
+  min-width: 280px;
+  animation: popupLogin 0.3s ease-out;
+}
+
+@keyframes popupLogin {
+  from {transform: scale(0.5); opacity: 0;}
+  to   {transform: scale(1); opacity: 1;}
+}
+
+.modal-content-login input {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  margin: 8px 0;
+  font-size: 18px;
+}
+
+.btn-login-submit {
+  width: 100%;
+  margin-top: 10px;
+  background:#3abf09;
+  color:#ffffff;
+  padding:10px;
+  font-size:18px;
+  border-radius:8px;
+}
+
+.close-login {
+  float:right;
+  font-size:28px;
+  cursor:pointer;
+  color:#ffcc00;
+}
+.close-login:hover { color:#fff; }
+

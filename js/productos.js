@@ -113,8 +113,6 @@ contenedorFavoritos.classList.add('contenedor-favoritos');
 
 let seccionFavs = document.getElementById("seccion_favs");
 
-let tituloCarrito = document.getElementById('titulo_favs');
-
 let totalFavoritos = document.getElementById('item_cantidad');
 
 let precioTotal = document.getElementById('precio_total');
@@ -145,7 +143,7 @@ function loadFavourites() {
             </div>
         `;
     });
-    precioTotal.innerText = 'Total : '.concat(totalPrice).concat(' $');
+    precioTotal.innerText = "Total: $" + totalPrice.toFixed(2);
     seccionFavs.appendChild(contenedorFavoritos);
     } catch (error) {
     console.error("Error al obtener los favoritos:", error);
@@ -153,6 +151,7 @@ function loadFavourites() {
   if (localStorage.length < 1) {
     seccionFavs.style.display = "none"; // Linea que oculta el carrito al NO haber producto seleccionados
   }
+  actualizarContador();
 }
 
 document.addEventListener("DOMContentLoaded", loadFavourites);
@@ -162,6 +161,8 @@ function eliminar(id) {
   console.log(idx);
   localStorage.removeItem(idx);
   loadFavourites();
+  const panel = document.getElementById("carrito-panel"); // 2 lineas agregadas para que no se cierre
+  panel.style.display = "flex";                           // el carrito desp de eliminar 1 producto
 }
 
 //boton deleteAll del html que elimina todos los favoritos.
@@ -182,4 +183,9 @@ document.getElementById("carrito-icono").addEventListener("click", () => {
   const panel = document.getElementById("carrito-panel");
   panel.style.display = (panel.style.display === "flex") ? "none" : "flex";
 });
+
+function actualizarContador(){
+  const total = localStorage.length;
+  document.getElementById("item_cantidad").innerText = total > 0 ? total : "0";
+}
 

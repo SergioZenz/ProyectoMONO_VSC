@@ -58,7 +58,7 @@ async function cargarUsuarios() {
   }
 }
 
-const session = JSON.parse(sessionStorageStorage.getItem("sessionUser"));
+const session = JSON.parse(sessionStorage.getItem("sessionUser"));
 
 // Todavía no está ACTIVO
 if(session){
